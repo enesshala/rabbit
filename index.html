@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">	
+	<style type="text/css">
+		body{
+			background-color: purple;
+		}
+		img{
+			display: block;
+			height: 90%;
+			position: absolute;
+		}
+		#lepuri{
+			z-index: -2;
+		}
+		#posht{
+			z-index: -1;
+		}
+		#lart{
+			z-index: 0;
+		}
+		button{
+			padding: 10px 20px;
+			background-color: lightblue;
+			border-radius: 25px 15px;
+		}
+	</style>
+</head>
+<body>
+	<div style="padding: 20px 100px;">
+	<button onclick="nderroLarte();">Top Clothes</button>
+
+	<button onclick="nderroPoshte()">Bottom Clothes</button>
+	</div>
+	<img id="lepuri" src="rabbit/character.png">
+	<img id="lart" src="rabbit/top1.png">
+	<img id="posht" src="rabbit/pant1.png">
+
+	<script type="text/javascript">
+		var n = 1;
+		function nderroLarte()
+		{
+			if(n<7) {
+				n=n+1;
+			}
+			else{
+				n=1;
+			}
+			document.getElementById('lart').src ="rabbit"+"/" + "top"+n+".png";
+		}
+	</script>
+	<script type="text/javascript">
+		var n = 1;
+		function nderroPoshte()
+		{
+			if(n<7) {
+				n=n+1;
+			}
+			else{
+				n=1;
+			}
+			document.getElementById('posht').src ="rabbit"+"/" + "pant"+n+".png";
+		}
+	</script>
+</body>
+</html>
